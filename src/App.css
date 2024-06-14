@@ -1,0 +1,36 @@
+.card {
+    flex-basis: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card-hover {
+    flex-basis: 250px;
+    background-color: gray;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card-title {
+    max-width: 250px;
+    height: 70px;
+    max-height: 70px;
+    text-align: center;
+}
+
+.card-image {
+    width: 250px;
+    height: 360px;
+}
+
+.card-price {
+    text-align: center;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
