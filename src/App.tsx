@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import CardList from "./components/CardList";
+import { CardSearcher } from "./components/CardSearcher";
+
 
 const ID = "1wyoeq_rQbZTOfH8COymYzkNEod8-7FEtogHopVzr0Jw";
 const WANTED_GID = "0";
@@ -43,6 +45,9 @@ function App() {
               <li>
                 <Link to={"/Wanted"}>Wanted Cards</Link>
               </li>
+              <li>
+                <Link to={"/Search"}>Search</Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -66,6 +71,10 @@ function App() {
             <Route
               path="/Wanted"
               element={wantedCards ? <CardList cards={wantedCards} /> : <></>}
+            />
+            <Route
+              path="/Search"
+              element={<CardSearcher/>}
             />
           </Routes>
         </div>
