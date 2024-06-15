@@ -4,15 +4,15 @@ import { CardSearcher } from "../components/CardSearcher";
 import { signOut } from "../auth/authService";
 import { useAuth } from "../auth/authContext";
 export const AppRoutes = () => {
-    //should be in a sign out component
-    const navigate = useNavigate()
-    const isLoggedIn = useAuth()
-    const onClick = async () => {
-        if (isLoggedIn){
-           await signOut()
-            navigate("/")
-        }
-      };
+  //should be in a sign out component
+  const navigate = useNavigate();
+  const isLoggedIn = useAuth();
+  const onClick = async () => {
+    if (isLoggedIn) {
+      await signOut();
+      navigate("/");
+    }
+  };
   return (
     <Routes>
       <Route element={<SignIn />} path="/" />
@@ -22,7 +22,7 @@ export const AppRoutes = () => {
             <CardSearcher/>
         }
       />
-      <Route path="/Search" element={<CardSearcher />} />
+      <Route path="/search" element={<CardSearcher />} />
     </Routes>
   );
 };

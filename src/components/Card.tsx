@@ -37,12 +37,10 @@ function Card({ name, set, image, price, quantity, person }: CardProps) {
       <h2 className="card-title">
         {name} - {set}
       </h2>
-      {image != null && (
-        <img
-          className="card-image"
-          src={isValidUrl(image) ? image : DEFAULT_IMAGE}
-        />
-      )}
+      <img
+        className="card-image"
+        src={isValidUrl(image) ? image : DEFAULT_IMAGE}
+      />
       <h3 className="card-price">
         {price == null
           ? person + " is looking for " + quantity
