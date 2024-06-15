@@ -9,7 +9,7 @@ import Loader from "./Loader";
 export const CardSearcher = () => {
   //this needs to change to a typescript class/interface to be decoded later
   const [data, setData] = useState<CardList>();
-  const [filter, setFilters] = useState<CardFilters>({});
+  const [filter, setFilters] = useState<CardFilters>();
   //should streamline this keep it like this for now
   const [isLoading, setIsLoading] = useState<Boolean>(false);
   useEffect(() => {
@@ -24,7 +24,7 @@ export const CardSearcher = () => {
       }
     };
 
-    fetchData();
+    filter && fetchData();
   }, [filter]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,21 +39,21 @@ export const CardSearcher = () => {
         <input
           type="text"
           name="fname"
-          value={filter.fname}
+          value={filter?.fname}
           onChange={handleChange}
           placeholder="Card Name"
         />
         <input
           type="text"
           name="type"
-          value={filter.type}
+          value={filter?.type}
           onChange={handleChange}
           placeholder="Card Type (comma separated)"
         />
         <input
           type="number"
           name="atk"
-          value={filter.atk}
+          value={filter?.atk}
           onChange={handleChange}
           placeholder="ATK"
         />

@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import dotenv from 'dotenv';
-dotenv.config();
+import { getAuth, signInWithRedirect } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -28,7 +28,14 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//for logging purposes maybe used later
-// const analytics = getAnalytics(app);
-
+const provider = new GoogleAuthProvider();
+provider.setCustomParameters({   
+  prompt : "select_account "
+});
+export const auth = getAuth(app);
+export const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider);
 export default app;
+
+
+  
+
