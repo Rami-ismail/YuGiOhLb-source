@@ -58,14 +58,16 @@ export const CardSearcher = () => {
           placeholder="ATK"
         />
       </div>
-      {!isLoading && <ul>
-          {data?.data.map((item, index) => (
+      {!isLoading && (
+        <ul>
+          {data?.data?.map((item, index) => (
             <li style={{ color: "white" }} key={index}>
               {item.name}
             </li>
           ))}
-        </ul>}
-      {isLoading && <Loader/>}
+        </ul>
+      )}
+      {isLoading && <Loader />}
     </div>
   );
 };
