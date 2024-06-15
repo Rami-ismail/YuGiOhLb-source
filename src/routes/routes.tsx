@@ -19,15 +19,7 @@ export const AppRoutes = () => {
       <Route
         path="/home"
         element={
-            <>
-            <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-            distinctio odio dignissimos ab deleniti corrupti sit quia delectus,
-            veritatis amet recusandae beatae dolorem dolorum facilis, quibusdam
-            omnis aspernatur blanditiis accusamus.
-          </h1>
-          <button onClick={onClick}>Sign Out</button>
-        </>  
+            <CardSearcher/>
         }
       />
       <Route path="/Search" element={<CardSearcher />} />

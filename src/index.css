@@ -1,17 +1,44 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Primary colors */
+  --primary-color: #007bff; /* Primary color */
+  --primary-dark: #0056b3; /* Darker shade of primary color */
+  --primary-light: #4dabf7; /* Lighter shade of primary color */
+
+  /* Secondary colors */
+  --secondary-color: #6c757d; /* Secondary color */
+  --secondary-dark: #495057; /* Darker shade of secondary color */
+  --secondary-light: #b0b6bd; /* Lighter shade of secondary color */
+
+  /* Background colors */
+  --background-color: #f8f9fa; /* Background color */
+  --background-dark: #343a40; /* Dark background color */
+  --background-light: #ffffff; /* Light background color */
+
+  /* Text colors */
+  --text-color: #212529; /* Body text color */
+  --text-light: #ffffff; /* Light text color */
+
+  /* Accent colors */
+  --success-color: #28a745; /* Success color */
+  --danger-color: #dc3545; /* Danger color */
+  --warning-color: #ffc107; /* Warning color */
+  --info-color: #17a2b8; /* Info color */
+
+  /* Typography */
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
+  /* Global settings */
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: var(--background-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* Disable text selection */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -19,3 +46,10 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--primary-color);
+}
+

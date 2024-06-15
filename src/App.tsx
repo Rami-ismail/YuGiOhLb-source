@@ -1,15 +1,24 @@
-import NavigationBar from "./shell/NavigationBar";
 import { AppRoutes } from "./routes/routes";
-import { useAuth } from "./auth/authContext";
+import NavigationBar from "./shell/NavigationBar";
+
+import AppSideBar from "./shell/SideBar";
 
 function App() {
-  const isLoggedIn = useAuth()
   return (
     <>
-     {isLoggedIn?.userLoggedin && <div className="header">
-        <NavigationBar />
-      </div>} 
-      <AppRoutes />
+      <NavigationBar />
+      <div className="app-container">
+        <div className="side-nav">
+          <AppSideBar />
+        </div>
+        <div className="main">
+          <div className="routes">
+            <AppRoutes />
+          </div>
+        </div>
+      </div>
+
+      <div className="footer"></div>
     </>
   );
 }
