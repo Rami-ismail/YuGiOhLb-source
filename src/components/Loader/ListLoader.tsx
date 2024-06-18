@@ -1,13 +1,16 @@
-import { Paper, CircularProgress } from '@mui/material'
-import { classes } from './LoaderStyles'
-
+import { Paper, CircularProgress } from "@mui/material";
+import { classes } from "../CardList/CardListStyles";
 
 const ListLoader = () => {
   return (
     <Paper sx={classes.loaderStyles}>
-    <CircularProgress size="60px" thickness={5} sx={classes.circularProgress} />
-  </Paper>
-  )
-}
+      <CircularProgress
+        size="60px"
+        thickness={5}
+        sx={classes.circularProgress}
+      />
+    </Paper>
+  );
+};
 
-export default ListLoader
+export default ListLoader;

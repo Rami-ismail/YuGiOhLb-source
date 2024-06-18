@@ -59,15 +59,14 @@ const CardsList = (listFilters: CardListFilters) => {
           hasMore={dataStatus && dataStatus.rows_remaining !== 0 ? true : false}
           height="calc(100vh - 145px)"
         >
-          <ImageList sx={{height: 'fit-content'}} cols={5} rowHeight={50}> 
-          {cardsList?.map((cardsInfo) =>
-            cardsInfo.card_images.map((cardImages) => (
-              //this should be exported to it's own component holding it's own state so when dragged and dropped send it's data to the cart
+          <ImageList sx={{ height: "fit-content" }} cols={5} rowHeight={50}>
+            {cardsList?.map((cardsInfo) =>
+              cardsInfo.card_images.map((cardImages) => (
+                //this should be exported to it's own component holding it's own state so when dragged and dropped send it's data to the cart
                 <Card sx={classes.cardWrapperStyles} key={cardImages.id}>
                   <CardMedia
                     component="img"
                     src={cardImages.image_url}
-                    
                     sx={classes.cardStyles}
                   ></CardMedia>
                   {cardsInfo.banlist_info?.ban_tcg && (
@@ -78,13 +77,12 @@ const CardsList = (listFilters: CardListFilters) => {
                     ></CardMedia>
                   )}
                 </Card>
-            ))
-          )}
-         </ImageList>
+              ))
+            )}
+          </ImageList>
         </InfiniteScroll>
       </Paper>
     </Paper>
-    
   );
 };
 export default CardsList;
