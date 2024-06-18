@@ -1,24 +1,26 @@
-import { AppRoutes } from "./routes/routes";
-import NavigationBar from "./shell/NavigationBar";
-
-import AppSideBar from "./shell/SideBar";
+// import { TornadoDragon } from "./mockData";
+import CardsList from "./components/CardList/CardsList";
 
 function App() {
   return (
     <>
-      <NavigationBar />
-      <div className="app-container">
-        <div className="side-nav">
-          <AppSideBar />
-        </div>
-        <div className="main">
-          <div className="routes">
-            <AppRoutes />
-          </div>
-        </div>
-      </div>
-
-      <div className="footer"></div>
+      <CardsList
+        cardsFilterName={"Dark Magician"}
+        // cardsFilterType={""}
+        // cardsFilterRace={""}
+        // cardsFilterAttribute={""}
+        // cardsFilterLevelRank={""}
+        // cardsFilterLevelRankCompare={""}
+        // cardsFilterLink={""}
+        // cardsFilterLinkMarkers={""}
+        // cardsFilterLinkValCompare={""}
+        // cardsFilterScales={""}
+        // cardsFilterAtk={""}
+        // cardsFilterDef={""}
+        // cardsFilterAtkCompare={""}
+        // cardsFilterDefCompare={""}
+        // cardsFilterSort={""}
+      ></CardsList>
     </>
   );
 }
