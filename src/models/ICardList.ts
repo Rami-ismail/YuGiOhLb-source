@@ -5,3 +5,4 @@ export interface ICardList {
     data: ICard[]
     meta?: IMetaRequestData
 }
+

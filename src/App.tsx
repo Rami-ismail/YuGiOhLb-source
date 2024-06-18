@@ -1,5 +1,7 @@
 // import { TornadoDragon } from "./mockData";
+import CardsDetail from "./components/CardDetails/CardsDetail";
 import CardsList from "./components/CardList/CardsList";
+import { TornadoDragon } from "./mockData";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         // cardsFilterDefCompare={""}
         // cardsFilterSort={""}
       ></CardsList>
+      <CardsDetail card={TornadoDragon}></CardsDetail>
     </>
   );
 }
