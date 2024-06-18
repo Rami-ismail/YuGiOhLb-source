@@ -67,6 +67,7 @@ const CardsList = (listFilters: CardListFilters) => {
                   <CardMedia
                     component="img"
                     src={cardImages.image_url}
+                    
                     sx={classes.cardStyles}
                   ></CardMedia>
                   {cardsInfo.banlist_info?.ban_tcg && (
